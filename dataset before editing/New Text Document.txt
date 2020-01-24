@@ -1,0 +1,8 @@
+                for f in os.listdir(img_dir):
+                    filepath = os.path.join(img_dir, f)
+                    with Image.open(f) as im:
+                        width, height= im.size
+                    totalsize = width*height
+                    if width < 256 or height<256:                    
+                        os.remove(filepath)
+                        print('gooooooooooood',f)
